@@ -1,209 +1,209 @@
 [ {
+  "Epoch Time of Scrape" : "1717221999890",
   "isWinner" : "true",
-  "Epoch Time of Scrape" : "1717207324877",
   "Nominations" : "6",
   "Year" : "2015",
   "Award" : "2",
   "Title" : "Spotlight"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207325133",
+  "Epoch Time of Scrape" : "1717221999929",
+  "isWinner" : "false",
   "Nominations" : "10",
   "Year" : "2015",
   "Award" : "6",
   "Title" : "Mad Max: Fury Road"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207325515",
+  "Epoch Time of Scrape" : "1717221999965",
+  "isWinner" : "false",
   "Nominations" : "12",
   "Year" : "2015",
   "Award" : "3",
   "Title" : "The Revenant"
 }, {
-  "Epoch Time of Scrape" : "1717207326066",
-  "isWinner" : "",
+  "Epoch Time of Scrape" : "1717222000001",
+  "isWinner" : "false",
   "Nominations" : "6",
   "Year" : "2015",
   "Award" : "1",
   "Title" : "Bridge of Spies"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207326705",
+  "Epoch Time of Scrape" : "1717222000037",
+  "isWinner" : "false",
   "Nominations" : "5",
   "Year" : "2015",
   "Award" : "1",
   "Title" : "The Big Short"
 }, {
+  "Epoch Time of Scrape" : "1717222006142",
   "isWinner" : "true",
-  "Epoch Time of Scrape" : "1717207331964",
   "Nominations" : "9",
   "Year" : "2014",
   "Award" : "4",
   "Title" : "Birdman"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207332223",
+  "Epoch Time of Scrape" : "1717222006188",
+  "isWinner" : "false",
   "Nominations" : "9",
   "Year" : "2014",
   "Award" : "4",
   "Title" : "The Grand Budapest Hotel"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207332631",
+  "Epoch Time of Scrape" : "1717222006236",
+  "isWinner" : "false",
   "Nominations" : "5",
   "Year" : "2014",
   "Award" : "3",
   "Title" : "Whiplash"
 }, {
-  "Epoch Time of Scrape" : "1717207333125",
-  "isWinner" : "",
+  "Epoch Time of Scrape" : "1717222006268",
+  "isWinner" : "false",
   "Nominations" : "8",
   "Year" : "2014",
   "Award" : "1",
   "Title" : "The Imitation Game"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207333654",
+  "Epoch Time of Scrape" : "1717222006298",
+  "isWinner" : "false",
   "Nominations" : "6",
   "Year" : "2014",
   "Award" : "1",
   "Title" : "American Sniper"
 }, {
+  "Epoch Time of Scrape" : "1717222012436",
   "isWinner" : "true",
-  "Epoch Time of Scrape" : "1717207338904",
   "Nominations" : "9",
   "Year" : "2013",
   "Award" : "3",
   "Title" : "12 Years a Slave"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207339162",
+  "Epoch Time of Scrape" : "1717222012473",
+  "isWinner" : "false",
   "Nominations" : "10",
   "Year" : "2013",
   "Award" : "7",
   "Title" : "Gravity"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207339473",
+  "Epoch Time of Scrape" : "1717222012503",
+  "isWinner" : "false",
   "Nominations" : "6",
   "Year" : "2013",
   "Award" : "3",
   "Title" : "Dallas Buyers Club"
 }, {
-  "Epoch Time of Scrape" : "1717207339901",
-  "isWinner" : "",
+  "Epoch Time of Scrape" : "1717222012535",
+  "isWinner" : "false",
   "Nominations" : "2",
   "Year" : "2013",
   "Award" : "2",
   "Title" : "Frozen"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207340404",
+  "Epoch Time of Scrape" : "1717222012569",
+  "isWinner" : "false",
   "Nominations" : "2",
   "Year" : "2013",
   "Award" : "2",
   "Title" : "The Great Gatsby"
 }, {
+  "Epoch Time of Scrape" : "1717222018681",
   "isWinner" : "true",
-  "Epoch Time of Scrape" : "1717207345665",
   "Nominations" : "7",
   "Year" : "2012",
   "Award" : "3",
   "Title" : "Argo"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207345967",
+  "Epoch Time of Scrape" : "1717222018712",
+  "isWinner" : "false",
   "Nominations" : "11",
   "Year" : "2012",
   "Award" : "4",
   "Title" : "Life of Pi"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207346426",
+  "Epoch Time of Scrape" : "1717222018744",
+  "isWinner" : "false",
   "Nominations" : "8",
   "Year" : "2012",
   "Award" : "3",
   "Title" : "Les Misérables"
 }, {
-  "Epoch Time of Scrape" : "1717207346972",
-  "isWinner" : "",
+  "Epoch Time of Scrape" : "1717222018775",
+  "isWinner" : "false",
   "Nominations" : "12",
   "Year" : "2012",
   "Award" : "2",
   "Title" : "Lincoln"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207347496",
+  "Epoch Time of Scrape" : "1717222018806",
+  "isWinner" : "false",
   "Nominations" : "5",
   "Year" : "2012",
   "Award" : "2",
   "Title" : "Django Unchained"
 }, {
+  "Epoch Time of Scrape" : "1717222024915",
   "isWinner" : "true",
-  "Epoch Time of Scrape" : "1717207352736",
   "Nominations" : "10",
   "Year" : "2011",
   "Award" : "5",
   "Title" : "The Artist"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207352997",
+  "Epoch Time of Scrape" : "1717222024947",
+  "isWinner" : "false",
   "Nominations" : "11",
   "Year" : "2011",
   "Award" : "5",
   "Title" : "Hugo"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207353344",
+  "Epoch Time of Scrape" : "1717222024978",
+  "isWinner" : "false",
   "Nominations" : "2",
   "Year" : "2011",
   "Award" : "2",
   "Title" : "The Iron Lady"
 }, {
-  "Epoch Time of Scrape" : "1717207353837",
-  "isWinner" : "",
+  "Epoch Time of Scrape" : "1717222025010",
+  "isWinner" : "false",
   "Nominations" : "5",
   "Year" : "2011",
   "Award" : "1",
   "Title" : "The Descendants"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207354343",
+  "Epoch Time of Scrape" : "1717222025041",
+  "isWinner" : "false",
   "Nominations" : "5",
   "Year" : "2011",
   "Award" : "1",
   "Title" : "The Girl with the Dragon Tattoo"
 }, {
+  "Epoch Time of Scrape" : "1717222031182",
   "isWinner" : "true",
-  "Epoch Time of Scrape" : "1717207359626",
   "Nominations" : "12",
   "Year" : "2010",
   "Award" : "4",
   "Title" : "The King's Speech"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207359885",
+  "Epoch Time of Scrape" : "1717222031214",
+  "isWinner" : "false",
   "Nominations" : "8",
   "Year" : "2010",
   "Award" : "4",
   "Title" : "Inception"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207360204",
+  "Epoch Time of Scrape" : "1717222031245",
+  "isWinner" : "false",
   "Nominations" : "8",
   "Year" : "2010",
   "Award" : "3",
   "Title" : "The Social Network"
 }, {
-  "Epoch Time of Scrape" : "1717207360690",
-  "isWinner" : "",
+  "Epoch Time of Scrape" : "1717222031261",
+  "isWinner" : "false",
   "Nominations" : "7",
   "Year" : "2010",
   "Award" : "2",
   "Title" : "The Fighter"
 }, {
-  "isWinner" : "",
-  "Epoch Time of Scrape" : "1717207361254",
+  "Epoch Time of Scrape" : "1717222031292",
+  "isWinner" : "false",
   "Nominations" : "5",
   "Year" : "2010",
   "Award" : "2",

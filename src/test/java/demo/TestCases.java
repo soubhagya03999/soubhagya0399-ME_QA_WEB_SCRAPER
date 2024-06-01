@@ -61,70 +61,38 @@ public class TestCases {
         }
     }
 
-    public static ArrayList<HashMap<String,String>> get_TheMovieDetails_on_OWFAJ(){
+    public static ArrayList<HashMap<String,String>> get_The_Movie_Details_on_OWFAJ(){
         try {
             Boolean isWinner=true;
             ArrayList<HashMap<String,String>> listOfHashMaps = new ArrayList<>();
             List<WebElement> page_of_year = driver.findElements(By.xpath("//a[contains(@class,'year-link')]"));
             for (WebElement webElement : page_of_year) {
                 webElement.click();
-                Thread.sleep(5000);
+                Thread.sleep(6000);
                 int count=0;
-                for(int i=2;i<=6;i++){
-                    List<WebElement> title = driver.findElements(By.xpath("//tbody[@id='table-body']/tr/td[1]"));
-                    HashMap<String,String> map= new HashMap<>();
-                    int titlecount=0;
-                    for (WebElement webElement2 : title) {
-                        titlecount++;
-                        count++;
-                        if (count==1 || count==11 ) {
-                                List<WebElement> bestpicture = driver.findElements(By.xpath("//tbody[@id='table-body']/tr/td[4]/i"));
-                                for (WebElement webElement5 : bestpicture) {
-                                    if (webElement5.isDisplayed()) {
-                                        isWinner=true;
-                                        map.put("isWinner", String.valueOf(isWinner));
-                                    }
-                                }
-                        }else if(count==3|| count==6 || count==15 || count==13){
-                            List<WebElement> bestpicture = driver.findElements(By.xpath("//tbody[@id='table-body']/tr/td[4]/i"));
-                            for (WebElement webElement6 : bestpicture) {
-                                    if (webElement6.isDisplayed())
-                                    map.put("isWinner", "");
-                            }
-                        }
-
-
-                        if (i==titlecount) {
-                            break;
-                        }              
-                        map.put("Epoch Time of Scrape", String.valueOf(System.currentTimeMillis()));
-                        map.put("Year", webElement.getText());
-                        map.put("Title", webElement2.getText());
-                        int nominationcount=1;
-                        List<WebElement> nominations = driver.findElements(By.xpath("//tbody[@id='table-body']/tr/td[2]"));
-                        for (WebElement webElement3 : nominations) {
-                            if (nominationcount==titlecount) {
-                                map.put("Nominations", webElement3.getText());
-                            }
-                            nominationcount++;
-                        }
-                        int awardcount=1;
-                        List<WebElement> award = driver.findElements(By.xpath("//tbody[@id='table-body']/tr/td[3]"));
-                        for (WebElement webElement4 : award) {
-                            if (awardcount==titlecount) {
-                                map.put("Award", webElement4.getText());
-                            }
-                            awardcount++;
-                        }
+                List<WebElement> title = driver.findElements(By.xpath("//tbody[@id='table-body']/tr/td[1]"));
+                List<WebElement> nominations = driver.findElements(By.xpath("//tbody[@id='table-body']/tr/td[2]"));
+                List<WebElement> award = driver.findElements(By.xpath("//tbody[@id='table-body']/tr/td[3]"));
+                for(WebElement ele:title){
+                    if (count==5) {
+                        break;
                     }
-
+                    HashMap<String,String> map= new HashMap<>();
+                    map.put("Epoch Time of Scrape", String.valueOf(System.currentTimeMillis()));
+                    map.put("Year", webElement.getText());
+                    map.put("Title", ele.getText());
+                    map.put("Nominations", nominations.get(count).getText());
+                    map.put("Award", award.get(count).getText());
+                    if (count==0) {
+                        isWinner=true;
+                    }else{
+                        isWinner=false;
+                    }
+                    map.put("isWinner", String.valueOf(isWinner));
                     listOfHashMaps.add(map);
+                    count++;
                 }
             }
-            // for (HashMap<String,String> a : listOfHashMaps) {
-            //     System.out.println(a);
-            // }
-            //System.out.println(listOfHashMaps);
             return listOfHashMaps;
         } catch (Exception e) {
             // TODO: handle exception
@@ -168,9 +136,6 @@ public class TestCases {
                     }
                     count++;
                 }
-                // for (HashMap<String,String> hashMap : listOfHashMaps) {
-                //     System.out.println(hashMap);
-                // }
                 return listOfHashMaps;
         } catch (Exception e) {
             // TODO: handle exception
@@ -214,8 +179,8 @@ public class TestCases {
             openURL("https://www.scrapethissite.com/pages/");
             click_on_OWFAJ();
             String outputDirectory = "output";
-            String fileName = "oscar-winning-films-data.json";
-            writeResultsToJson(get_TheMovieDetails_on_OWFAJ(), outputDirectory, fileName);
+            String fileName = "oscar-winning-films-data";
+            writeResultsToJson(get_The_Movie_Details_on_OWFAJ(), outputDirectory, fileName);
             File outputFile = new File(outputDirectory, fileName);
             Assert.assertTrue(outputFile.exists(), "JSON file does not exist in the output folder");
             Assert.assertTrue(outputFile.length() > 0, "JSON file is empty");
