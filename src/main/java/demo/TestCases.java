@@ -2,15 +2,12 @@ package demo;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 
 public class TestCases {
     ChromeDriver driver;
     public TestCases()
     {
         System.out.println("Constructor: TestCases");
-        WebDriverManager.chromedriver().timeout(30).setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }

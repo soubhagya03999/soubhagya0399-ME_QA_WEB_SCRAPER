@@ -18,15 +18,28 @@ repositories {
 }
 
 dependencies {
-
+     // Use TestNG framework, also requires calling test.useTestNG() below
+    testImplementation 'org.testng:testng:7.4.0'
+    
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
-   
-    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
-    implementation 'io.github.bonigarcia:webdrivermanager:5.5.3'
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    implementation 'org.seleniumhq.selenium:selenium-java:4.14.0'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.21.0'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-io
+    implementation 'org.apache.commons:commons-io:1.3.2'
+
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+    implementation group: 'org.apache.poi', name: 'poi', version: '5.2.2'
+    
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.2'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
 
 }
 
@@ -39,3 +52,30 @@ dependencies {
 //test.dependsOn startScript
 
 mainClassName = 'demo.App'
+
+test {
+    // Use TestNG for unit tests.
+    useTestNG() {
+    suites 'src\\test\\resources\\testNg.xml'
+   }
+    afterSuite { desc, result ->
+            if (!desc.parent) {
+                println "\nTEST RESULT: ${result.resultType}"
+                println "TEST SUMMARY: RAN ${result.testCount} TESTS, " +
+                        "${result.successfulTestCount} SUCCEEDED, " +
+                        "${result.failedTestCount} FAILED, " +
+                        "${result.skippedTestCount} SKIPPED"
+            }
+    }
+
+    testLogging {
+		events "PASSED", "SKIPPED", "FAILED", "STANDARD_OUT", "STANDARD_ERROR"
+        exceptionFormat = 'full'
+
+        // Optionally do:
+        showStackTraces = true
+	}
+
+    testLogging.showStandardStreams = true
+    test.outputs.upToDateWhen {false}
+}
