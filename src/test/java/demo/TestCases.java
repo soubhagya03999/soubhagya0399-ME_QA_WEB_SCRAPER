@@ -101,41 +101,27 @@ public class TestCases {
         }
     }
 
-    public static ArrayList<HashMap<String,String>> get_TeamName_Year_Win_where_win_less_than_40_percentage(){
+    public static ArrayList<HashMap<String,String>> get_TeamName_Year_Win_where_win_less_than_40_percentage(int pages){
         try {
             ArrayList<HashMap<String,String>> listOfHashMaps = new ArrayList<>();
-            for(int i=1;i<=4;i++){
+            for(int i=1;i<=pages;i++){
                 pages_on_HTFSP(i);
                 List<WebElement> win_percentage = driver.findElements(By.xpath("//table[@class='table']/tbody/tr/th[normalize-space()='Win %']/following::tr/td[6]"));
-                List<WebElement> teamName = driver.findElements(By.xpath("//table[@class='table']/tbody/tr/th[normalize-space()='Win %']/following::tr/td[1]"));
-                List<WebElement> year = driver.findElements(By.xpath("//table[@class='table']/tbody/tr/th[normalize-space()='Win %']/following::tr/td[2]"));
-                int count=1;
+                List<WebElement> teamName = driver.findElements(By.xpath("//table[@class='table']/tbody/tr/th[normalize-space()='Team Name']/following::tr/td[1]"));
+                List<WebElement> year = driver.findElements(By.xpath("//table[@class='table']/tbody/tr/th[normalize-space()='Year']/following::tr/td[2]"));
+                int count=0;
                 for (WebElement webElement : win_percentage) {
                     HashMap<String,String> map1= new HashMap<>();
-                    if (Double.parseDouble(webElement.getText())<0.40) {
+                    if (Double.parseDouble(webElement.getText())<0.40 && Double.parseDouble(webElement.getText())>0) {
                         map1.put("Epoch Time of Scrape", String.valueOf(System.currentTimeMillis()));
                         map1.put("Win Percentage", webElement.getText());
-                        int teamcount=1;
-                        for (WebElement webElement1 : teamName) {
-                            if (teamcount==count) {
-                                map1.put("Team Name", webElement1.getText());
-                                break;
-                            }
-                            teamcount++;
-                        }
-                        int yearcount=1;
-                        for (WebElement webElement2 : year) {
-                            if (yearcount==count) {
-                                map1.put("Year",webElement2.getText());
-                                break;
-                            }
-                            yearcount++;
-                        }
+                        map1.put("Team Name", teamName.get(count).getText());
+                        map1.put("Year",year.get(count).getText());
                         listOfHashMaps.add(map1);
-                    }
                     }
                     count++;
                 }
+            }
                 return listOfHashMaps;
         } catch (Exception e) {
             // TODO: handle exception
@@ -157,13 +143,13 @@ public class TestCases {
 }
 
     @Test
-    public static void TestCase01(){
+    public void TestCase01(){
         try {
             openURL("https://www.scrapethissite.com/pages/");
             click_on_HTFSP();
             String outputDirectory = "output";
             String fileName = "hockey-team-data.json";
-            writeResultsToJson(get_TeamName_Year_Win_where_win_less_than_40_percentage(), outputDirectory, fileName);
+            writeResultsToJson(get_TeamName_Year_Win_where_win_less_than_40_percentage(4), outputDirectory, fileName);
             File outputFile = new File(outputDirectory, fileName);
             Assert.assertTrue(outputFile.exists(), "JSON file does not exist in the output folder");
             Assert.assertTrue(outputFile.length() > 0, "JSON file is empty");
